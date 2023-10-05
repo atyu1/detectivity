@@ -3,7 +3,7 @@ CHECKCOUNT=$(awk -v d1="$(date --date="-1 min" "+%b %e %H:%M:%S")" -v d2="$(date
 echo $CHECKCOUNT
 if [ $CHECKCOUNT -gt 0 ]
 then
-        $(/bin/python3 /home/atyu/send_telegram.py)
+        $(/bin/python3 ./send_telegram.py)
 else
    echo "Do nothing" > /dev/null
 fi
